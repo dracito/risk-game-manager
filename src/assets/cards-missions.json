@@ -1,0 +1,47 @@
+[
+  {
+    "description": "Détruisez l'armée verte. Si vous êtes l'armée verte, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Détruisez l'armée rouge. Si vous êtes l'armée rouge, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Détruisez l'armée bleue. Si vous êtes l'armée bleue, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Détruisez l'armée noire. Si vous êtes l'armée noire, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Détruisez l'armée jaune. Si vous êtes l'armée jaune, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Détruisez l'armée rose. Si vous êtes l'armée rose, occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Occupez 24 territoires de votre choix."
+  },
+  {
+    "description": "Occupez 18 territoires de votre choix avec au moins 2 armées sur chacun."
+  },
+  {
+    "description": "Occupez les continents Asie et Amérique du sud entièrement"
+  },
+  {
+    "description": "Occupez les continents Asie et Afrique entièrement"
+  },
+  {
+    "description": "Occupez les continents Amérique du Nord et Afrique entièrement"
+  },
+  {
+    "description": "Occupez les continents Amérique du Nord et Australie entièrement"
+  },
+  {
+    "description": "Occupez les continents Europe, Amérique du sud, et un troisième entièrement"
+  },
+  {
+    "description": "Occupez les continents Europe, Amérique du sud, et un troisième entièrement"
+  },
+  {
+    "description": "Occupez les continents Europe, Australie, et un troisième entièrement"
+  }
+]
