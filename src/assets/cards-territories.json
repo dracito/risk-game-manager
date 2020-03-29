@@ -1,11 +1,11 @@
 [
   {
-    "country": "Grande-Bretagne",
+    "territory": "Grande-Bretagne",
     "continent": "Europe",
     "type": "Canon"
   },
   {
-    "country": "Islande",
+    "territory": "Islande",
     "continent": "Europe",
     "type": "Fantassin"
   }

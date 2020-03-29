@@ -1,3 +1,5 @@
+import { DeckCard } from "../cards/deckCard";
+
 export class Game{
   id:string;
   token:string;
@@ -5,6 +7,6 @@ export class Game{
   createdAt:Date;
   startedAt:Date;
   players:Array<Player>;
-  countriesDeck:Array<CountryCard>;
-  missionDeck:Array<MissionCard>;
+  deck:Array<DeckCard>;//Deck used during playing, do not use for game preparation (use only territories cards without wild card for game board building).
+  state:GameState;
 }
