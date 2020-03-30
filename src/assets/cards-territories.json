@@ -2,47 +2,47 @@
   {
     "territory": "Grande-Bretagne",
     "continent": "Europe",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Islande",
     "continent": "Europe",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Europe du Nord",
     "continent": "Europe",
-    "type": "Canon"
+    "type": "Cavalier"
   },
   {
     "territory": "Scandinavie",
     "continent": "Europe",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Europe du Sud",
     "continent": "Europe",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Ukraine",
     "continent": "Europe",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Europe occidentale",
     "continent": "Europe",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Afghanistan",
     "continent": "Asie",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Chine",
     "continent": "Asie",
-    "type": "Fantassin"
+    "type": "Canon"
   },
   {
     "territory": "Inde",
@@ -50,69 +50,69 @@
     "type": "Cavalier"
   },
   {
-    "territory": "Tchita",
+    "territory": "Tchita", IRKUTSK
     "continent": "Asie",
     "type": "Cavalier"
   },
   {
     "territory": "Japon",
     "continent": "Asie",
-    "type": "Canon"
+    "type": "Cavalier"
   },
   {
     "territory": "Kamtchatka",
     "continent": "Asie",
-    "type": "Fantassin"
+    "type": "Canon"
   },
   {
     "territory": "Moyen-Orient",
     "continent": "Asie",
-    "type": "Fantassin"
+    "type": "Canon"
   },
   {
     "territory": "Mongolie",
     "continent": "Asie",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Siam",
     "continent": "Asie",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Sibérie",
     "continent": "Asie",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Oural",
     "continent": "Asie",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Yakoutie",
     "continent": "Asie",
-    "type": "Cavalier"
+    "type": "Canon"
   },
   {
     "territory": "Alaska",
     "continent": "Amérique du Nord",
-    "type": "Fantassin"
+    "type": "Canon"
   },
   {
     "territory": "Alberta",
     "continent": "Amérique du Nord",
-    "type": "Cavalier"
+    "type": "Canon"
   },
   {
     "territory": "Amérique centrale",
     "continent": "Amérique du Nord",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Etats de l'Est",
     "continent": "Amérique du Nord",
-    "type": "Cavalier"
+    "type": "Canon"
   },
   {
     "territory": "Groenland",
@@ -122,17 +122,17 @@
   {
     "territory": "Territoires du Nord-Ouest",
     "continent": "Amérique du Nord",
-    "type": "Canon"
+    "type": "Cavalier"
   },
   {
     "territory": "Ontario",
     "continent": "Amérique du Nord",
-    "type": "Cavalier"
+    "type": "Canon"
   },
   {
     "territory": "Québec",
     "continent": "Amérique du Nord",
-    "type": "Cavalier"
+    "type": "Canon"
   },
   {
     "territory": "Etats de l'Ouest",
@@ -147,22 +147,22 @@
   {
     "territory": "Brésil",
     "continent": "Amérique du Sud",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Pérou",
     "continent": "Amérique du Sud",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Venezuela",
     "continent": "Amérique du Sud",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Congo",
     "continent": "Afrique",
-    "type": "Fantassin"
+    "type": "Canon"
   },
   {
     "territory": "Afrique de l'Est",
@@ -182,7 +182,7 @@
   {
     "territory": "Afrique du Nord",
     "continent": "Afrique",
-    "type": "Cavalier"
+    "type": "Fantassin"
   },
   {
     "territory": "Afrique du Sud",
@@ -197,16 +197,16 @@
   {
     "territory": "Indonésie",
     "continent": "Océanie",
-    "type": "Canon"
+    "type": "Fantassin"
   },
   {
     "territory": "Nouvelle-Guinée",
     "continent": "Océanie",
-    "type": "Fantassin"
+    "type": "Cavalier"
   },
   {
     "territory": "Australie Occidendale",
     "continent": "Océanie",
-    "type": "Canon"
+    "type": "Cavalier"
   }
 ]
