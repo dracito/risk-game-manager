@@ -1,4 +1,4 @@
-import { DeckCard } from "../deckCard";
+import { DeckCard } from "../DeckCard";
 
 export class WildCard extends DeckCard{
 }

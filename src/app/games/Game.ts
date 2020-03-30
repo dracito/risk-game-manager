@@ -1,4 +1,5 @@
-import { DeckCard } from "../cards/deckCard";
+import { DeckCard } from "../cards/DeckCard";
+import { Player } from "../players/Player";
 
 export class Game{
   id:string;
