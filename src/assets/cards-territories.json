@@ -8,5 +8,205 @@
     "territory": "Islande",
     "continent": "Europe",
     "type": "Fantassin"
+  },
+  {
+    "territory": "Europe du Nord",
+    "continent": "Europe",
+    "type": "Canon"
+  },
+  {
+    "territory": "Scandinavie",
+    "continent": "Europe",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Europe du Sud",
+    "continent": "Europe",
+    "type": "Canon"
+  },
+  {
+    "territory": "Ukraine",
+    "continent": "Europe",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Europe occidentale",
+    "continent": "Europe",
+    "type": "Canon"
+  },
+  {
+    "territory": "Afghanistan",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Chine",
+    "continent": "Asie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Inde",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Tchita",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Japon",
+    "continent": "Asie",
+    "type": "Canon"
+  },
+  {
+    "territory": "Kamtchatka",
+    "continent": "Asie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Moyen-Orient",
+    "continent": "Asie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Mongolie",
+    "continent": "Asie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Siam",
+    "continent": "Asie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Sibérie",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Oural",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Yakoutie",
+    "continent": "Asie",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Alaska",
+    "continent": "Amérique du Nord",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Alberta",
+    "continent": "Amérique du Nord",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Amérique centrale",
+    "continent": "Amérique du Nord",
+    "type": "Canon"
+  },
+  {
+    "territory": "Etats de l'Est",
+    "continent": "Amérique du Nord",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Groenland",
+    "continent": "Amérique du Nord",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Territoires du Nord-Ouest",
+    "continent": "Amérique du Nord",
+    "type": "Canon"
+  },
+  {
+    "territory": "Ontario",
+    "continent": "Amérique du Nord",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Québec",
+    "continent": "Amérique du Nord",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Etats de l'Ouest",
+    "continent": "Amérique du Nord",
+    "type": "Canon"
+  },
+  {
+    "territory": "Argentine",
+    "continent": "Amérique du Sud",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Brésil",
+    "continent": "Amérique du Sud",
+    "type": "Canon"
+  },
+  {
+    "territory": "Pérou",
+    "continent": "Amérique du Sud",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Venezuela",
+    "continent": "Amérique du Sud",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Congo",
+    "continent": "Afrique",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Afrique de l'Est",
+    "continent": "Afrique",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Egypte",
+    "continent": "Afrique",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Madagascar",
+    "continent": "Afrique",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Afrique du Nord",
+    "continent": "Afrique",
+    "type": "Cavalier"
+  },
+  {
+    "territory": "Afrique du Sud",
+    "continent": "Afrique",
+    "type": "Canon"
+  },
+  {
+    "territory": "Australie Orientale",
+    "continent": "Océanie",
+    "type": "Canon"
+  },
+  {
+    "territory": "Indonésie",
+    "continent": "Océanie",
+    "type": "Canon"
+  },
+  {
+    "territory": "Nouvelle-Guinée",
+    "continent": "Océanie",
+    "type": "Fantassin"
+  },
+  {
+    "territory": "Australie Occidendale",
+    "continent": "Océanie",
+    "type": "Canon"
   }
 ]
