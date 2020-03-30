@@ -1,0 +1,13 @@
+<p>
+territories-list works!
+</p>
+<div class="territories-list" *ngIf="territories && territories.length > 0">
+  <p>
+  Liste des {{ territories.length }} territoires:
+  </p>
+  <ol>
+    <li class="mission-item" *ngFor="let territory of territories">
+      {{ territory.territory }}
+    </li>
+  </ol>
+</div>

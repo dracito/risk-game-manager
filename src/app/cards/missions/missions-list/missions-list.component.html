@@ -1,0 +1,10 @@
+<div class="missions-list" *ngIf="missions && missions.length > 0">
+  <p>
+  Liste des {{ missions.length }} missions:
+  </p>
+  <ol>
+    <li class="mission-item" *ngFor="let mission of missions">
+      {{ mission.description }}
+    </li>
+  </ol>
+</div>
