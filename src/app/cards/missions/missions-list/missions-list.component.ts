@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MissionsService } from '../../services/missions.service';
-import { MissionsDeckFactory } from '../../services/MissionsDeckFactory';
+import { MissionsService } from '../missions.service';
 
 @Component({
   selector: 'app-missions-list',
