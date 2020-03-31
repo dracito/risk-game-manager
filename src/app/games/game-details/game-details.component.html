@@ -1,13 +1,10 @@
-<p>
-game-details works!
-</p>
 <div class="game-details" *ngIf="game">
   <p>
   Détails de la partie:
   </p>
   <ul>
     <li>
-      Statut : {{ game.state }}
+      Statut : {{ gameState }}
     </li>
     <li>
       Nom : {{ game.name }}      
@@ -22,13 +19,20 @@ game-details works!
       Commencée le : {{ game.startedAt }}
     </li>
     <li>
-      Nombre de carte dans la pioche : <div *ngIf="game.deck">{{ game.deck.length }}</div> 
+      Nombre de cartes dans la pioche : <div *ngIf="game.deck">{{ game.deck.length }}</div>
+      <div *ngIf="game.deck && game.deck.length>0"> Liste des cartes dans la pioche :         
+        <ol>
+          <li class="card-item" *ngFor="let card of game.deck">
+            <div *ngIf="isWildCard(card); then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>Joker</ng-template>
+            <ng-template #elseBlock>{{ card.territory }}, {{ card.continent }}, {{ card.type }}</ng-template>
+          </li>
+        </ol>
+      </div>
     </li>
     <li>
       Nombre de joueurs : <div *ngIf="game.players">{{ game.players.length }}</div>
     </li>
-    <li>
-      Statut : {{ game.state }}      
-    </li>
+    
   </ul>
 </div>

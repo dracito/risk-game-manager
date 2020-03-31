@@ -1,4 +1,4 @@
-enum GameState {
+export enum GameState {
     Created,
     WaitingForPlayer,
     BuildingTheBoard,

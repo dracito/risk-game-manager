@@ -1,6 +1,7 @@
 import { DeckCard } from "../cards/DeckCard";
 import { Player } from "../players/Player";
 import { Observable } from "rxjs";
+import { GameState } from "./GameState";
 
 export class Game{
   id:string;
@@ -9,7 +10,7 @@ export class Game{
   createdAt:Date;
   startedAt:Date;
   players:Player[];
-  deck:DeckCard[];//Deck used during playing, do not use for game preparation (use only territories cards without wild card for game board building).
+  deck:DeckCard[];//Deck used during playing, do not use for game preparation (preparation use only territories cards without wild card for game board building).
   state:GameState;
 
   constructor(){
