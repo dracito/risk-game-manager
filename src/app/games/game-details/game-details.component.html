@@ -1,0 +1,34 @@
+<p>
+game-details works!
+</p>
+<div class="game-details" *ngIf="game">
+  <p>
+  Détails de la partie:
+  </p>
+  <ul>
+    <li>
+      Statut : {{ game.state }}
+    </li>
+    <li>
+      Nom : {{ game.name }}      
+    </li>
+    <li>
+      Token : {{ game.token }}
+    </li>
+    <li>
+      Créée le : {{ game.createdAt }}
+    </li>
+    <li>
+      Commencée le : {{ game.startedAt }}
+    </li>
+    <li>
+      Nombre de carte dans la pioche : <div *ngIf="game.deck">{{ game.deck.length }}</div> 
+    </li>
+    <li>
+      Nombre de joueurs : <div *ngIf="game.players">{{ game.players.length }}</div>
+    </li>
+    <li>
+      Statut : {{ game.state }}      
+    </li>
+  </ul>
+</div>

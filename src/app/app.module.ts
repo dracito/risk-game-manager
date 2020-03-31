@@ -9,6 +9,8 @@ import { MissionsService } from './cards/missions/missions.service';
 import { MissionsListComponent } from './cards/missions/missions-list/missions-list.component';
 import { TerritoriesService } from './cards/territories/territories.service';
 import { TerritoriesListComponent } from './cards/territories/territories-list/territories-list.component';
+import { GameService } from './games/game.service';
+import { GameDetailsComponent } from './games/game-details/game-details.component';
 
 
 @NgModule({
@@ -20,10 +22,12 @@ import { TerritoriesListComponent } from './cards/territories/territories-list/t
     AppComponent,
     HelloComponent,
     MissionsListComponent,
-    TerritoriesListComponent ],
+    TerritoriesListComponent,
+    GameDetailsComponent ],
   bootstrap:    [ AppComponent ],
   providers: [
     MissionsService,
-    TerritoriesService]
+    TerritoriesService,
+    GameService]
 })
 export class AppModule { }
