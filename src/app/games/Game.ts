@@ -17,6 +17,8 @@ export class Game{
     this.token = this.makeToken(10);
     this.createdAt = new Date(Date.now());
     this.state = GameState.Created;
+    this.deck = new Array<DeckCard>();
+    this.players = new Array<Player>();
   }
   
   private makeToken(length) {

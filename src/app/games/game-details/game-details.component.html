@@ -19,7 +19,7 @@
       Commencée le : {{ game.startedAt }}
     </li>
     <li>
-      Nombre de cartes dans la pioche : <div *ngIf="game.deck">{{ game.deck.length }}</div>
+      Nombre de cartes dans la pioche : <ng-template [ngIf]="game.deck">{{ game.deck.length }}</ng-template>
       <div *ngIf="game.deck && game.deck.length>0"> Liste des cartes dans la pioche :         
         <ol>
           <li class="card-item" *ngFor="let card of game.deck">
@@ -31,7 +31,7 @@
       </div>
     </li>
     <li>
-      Nombre de joueurs : <div *ngIf="game.players">{{ game.players.length }}</div>
+      Nombre de joueurs : <ng-template [ngIf]="game.players">{{ game.players.length }}</ng-template>
     </li>
     
   </ul>

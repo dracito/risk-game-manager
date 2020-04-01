@@ -3,6 +3,7 @@ import { Game } from '../Game';
 import { GameState } from '../GameState';
 import { GameService } from '../game.service';
 import { WildCard } from '../../cards/wild-cards/WildCard';
+import { Player } from '../../players/Player';
 
 @Component({
   selector: 'app-game-details',

@@ -22,9 +22,6 @@ export class GameService {
   }
 
   public buildDeck(game:Game){    
-    if(!game.deck)
-      game.deck = new Array<DeckCard>();
-
     //Add 2 Wild Cards
     game.deck.push(new WildCard());
     game.deck.push(new WildCard());
