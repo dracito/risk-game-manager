@@ -1,0 +1,28 @@
+<div class="player-details" *ngIf="player">
+  <p>
+  Détails du joueur:
+  </p>
+  <ul>
+    <li>
+      Nom : {{ player.name }}      
+    </li>
+    <li>
+      Mission : {{ player.mission }}
+    </li>
+    <li>
+      Créé le : {{ player.createdAt }}
+    </li>
+    <li>
+      Nombre de cartes en main : <ng-template [ngIf]="player.hand">{{ player.hand.length }}</ng-template>
+      <div *ngIf="player.hand && player.hand.length>0"> Liste des cartes dans la main :         
+        <ol>
+          <li class="card-item" *ngFor="let card of player.hand">
+            <div *ngIf="isWildCard(card); then thenBlock else elseBlock"></div>
+            <ng-template #thenBlock>Joker</ng-template>
+            <ng-template #elseBlock>{{ card.territory }}, {{ card.continent }}, {{ card.type }}</ng-template>
+          </li>
+        </ol>
+      </div>
+    </li>
+  </ul>
+</div>
