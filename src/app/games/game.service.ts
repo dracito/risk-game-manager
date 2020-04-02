@@ -10,15 +10,15 @@ import { TerritoryCard } from '../cards/territories/TerritoryCard';
 import { MissionCard } from '../cards/missions/MissionCard';
 import { DeckCard } from '../cards/DeckCard';
 import { getAttrsForDirectiveMatching } from '@angular/compiler/src/render3/view/util';
+import { PlayersService } from '../players/players.service';
 
 @Injectable()
 export class GameService {
 
-  constructor(private territoriesService: TerritoriesService) { }
+  constructor(private territoriesService: TerritoriesService, private playersService:PlayersService) { }
 
   public buildMissions(game:Game){
     let cards:MissionCard[];
-
   }
 
   public buildDeck(game:Game){    
@@ -39,6 +39,21 @@ export class GameService {
       complete: () => {this.shuffle(game.deck);}
     };
     this.territoriesService.getTerritoriesDeck().subscribe(myObserver);    
+  }
+
+  public addPlayers(game: Game){
+    const myObserver = {
+      next(x) {
+        if(x.length > 0){
+          for (let player of x) {
+            game.players.push(player);
+          }
+        }
+      },
+      error: err => console.error('Observer got an error: ' + err),
+      complete: () => {}
+    };
+    this.playersService.getPlayers().subscribe(myObserver);
   }
 
   public addPlayer(game: Game, player: Player){    
