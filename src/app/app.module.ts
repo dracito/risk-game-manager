@@ -13,6 +13,7 @@ import { GameService } from './games/game.service';
 import { GameDetailsComponent } from './games/game-details/game-details.component';
 import { PlayerDetailsComponent } from './players/player-details/player-details.component';
 import { PlayersListComponent } from './players/players-list/players-list.component';
+import { PlayersService } from './players/players.service';
 
 
 @NgModule({
@@ -32,6 +33,7 @@ import { PlayersListComponent } from './players/players-list/players-list.compon
   providers: [
     MissionsService,
     TerritoriesService,
-    GameService]
+    GameService,
+    PlayersService]
 })
 export class AppModule { }

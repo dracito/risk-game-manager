@@ -1,0 +1,16 @@
+[
+  {
+    "id": "1",
+    "name": "NomJoueur1",
+    "createdAt": null,
+    "hand": null,
+    "mission": null
+  },
+  {
+    "id": "2",
+    "name": "NomJoueur2",
+    "createdAt": null,
+    "hand": null,
+    "mission": null
+  }
+]
