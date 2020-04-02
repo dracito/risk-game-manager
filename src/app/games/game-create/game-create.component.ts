@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { Game } from '../Game';
 
-import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-game-create',
@@ -11,23 +12,22 @@ import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 })
 export class GameCreateComponent implements OnInit {
   game;
-  createForm;
+  createForm = new FormGroup({
+    nameControl: new FormControl(''),
+  });
 
-  constructor(private gameService:GameService, private formBuilder: FormBuilder) { 
-    this.createForm = this.formBuilder.group({
-      name: ''
-    });
+  constructor(private gameService:GameService) {     
   }
 
   ngOnInit() {
     this.game = new Game();
   }
 
-  onSubmit(data) {
+  onSubmit() {
+    console.warn('La partie a bien été créée', this.createForm.value);
+    console.warn('La partie a bien été créée', this.createForm.value["nameControl"]);
     // Process checkout data here
     this.game = this.gameService.createGame();
-    this.createForm.reset();
-
-    console.warn('La partie a bien été créée', data);
+    this.createForm.reset();    
   }
 }

@@ -17,9 +17,16 @@ export class GameService {
 
   constructor(private territoriesService: TerritoriesService, private playersService:PlayersService) { }
 
-  public createGame(data):Game{
-    //TODO
-    return new Game();
+  public createGame(name:string):Game{
+    let game = new Game();
+    game.name = name;
+    return this.saveGame(game);
+  }
+
+  private saveGame(game:Game):Game{
+    //TODO save game in database
+    //game.id = BDD.save(Game);
+    return game;
   }
 
   public buildMissions(game:Game){

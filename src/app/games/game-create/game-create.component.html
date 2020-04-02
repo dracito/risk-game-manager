@@ -1,6 +1,12 @@
 <p>
 game-create works!
 </p>
-<form [formGroup]="createForm" (ngSubmit)="onSubmit(createForm.value)">
+<form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Nom:
+      <input type="text" formControlName="nameControl">
+    </label>
+  </div>
   <button class="button" type="submit">Créer</button>
 </form>
