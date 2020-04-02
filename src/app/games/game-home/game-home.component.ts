@@ -11,4 +11,12 @@ export class GameHomeComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  createGame(){
+
+  }
+
+  joinGame(){
+    
+  }
 }
