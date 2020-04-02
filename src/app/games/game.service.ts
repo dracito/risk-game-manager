@@ -17,6 +17,11 @@ export class GameService {
 
   constructor(private territoriesService: TerritoriesService, private playersService:PlayersService) { }
 
+  public createGame(data):Game{
+    //TODO
+    return new Game();
+  }
+
   public buildMissions(game:Game){
     let cards:MissionCard[];
   }

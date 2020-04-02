@@ -7,3 +7,9 @@ game-home works!
 <button (click)="joinGame()">
     Rejoindre une partie existante
 </button>
+<div *ngIf="gameCreate">
+  <app-game-create></app-game-create>
+</div>
+<div *ngIf="gameJoin">
+  form game join
+</div>

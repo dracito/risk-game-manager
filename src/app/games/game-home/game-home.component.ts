@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-home.component.css']
 })
 export class GameHomeComponent implements OnInit {
+  gameCreate = false;
+  gameJoin = false;
 
   constructor() { }
 
@@ -13,10 +15,12 @@ export class GameHomeComponent implements OnInit {
   }
 
   createGame(){
-
+    this.gameCreate = true;
+    this.gameJoin = false;
   }
 
   joinGame(){
-    
+    this.gameCreate = false;
+    this.gameJoin = true;
   }
 }

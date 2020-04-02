@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -15,13 +15,15 @@ import { PlayerDetailsComponent } from './players/player-details/player-details.
 import { PlayersListComponent } from './players/players-list/players-list.component';
 import { PlayersService } from './players/players.service';
 import { GameHomeComponent } from './games/game-home/game-home.component';
+import { GameCreateComponent } from './games/game-create/game-create.component';
 
 
 @NgModule({
   imports:      [ 
     BrowserModule,
     FormsModule,
-    HttpClientModule ],
+    HttpClientModule,
+    ReactiveFormsModule ],
   declarations: [ 
     AppComponent,
     HelloComponent,
@@ -30,7 +32,8 @@ import { GameHomeComponent } from './games/game-home/game-home.component';
     GameDetailsComponent,
     PlayerDetailsComponent,
     PlayersListComponent,
-    GameHomeComponent ],
+    GameHomeComponent,
+    GameCreateComponent ],
   bootstrap:    [ AppComponent ],
   providers: [
     MissionsService,
