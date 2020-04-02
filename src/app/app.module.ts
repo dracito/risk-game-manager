@@ -12,6 +12,7 @@ import { TerritoriesListComponent } from './cards/territories/territories-list/t
 import { GameService } from './games/game.service';
 import { GameDetailsComponent } from './games/game-details/game-details.component';
 import { PlayerDetailsComponent } from './players/player-details/player-details.component';
+import { PlayersListComponent } from './players/players-list/players-list.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { PlayerDetailsComponent } from './players/player-details/player-details.
     MissionsListComponent,
     TerritoriesListComponent,
     GameDetailsComponent,
-    PlayerDetailsComponent ],
+    PlayerDetailsComponent,
+    PlayersListComponent ],
   bootstrap:    [ AppComponent ],
   providers: [
     MissionsService,

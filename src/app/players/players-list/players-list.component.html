@@ -1,0 +1,13 @@
+<p>
+players-list works!
+</p>
+<div class="players-list" *ngIf="players && players.length > 0">
+  <p>
+  Liste des {{ players.length }} joueurs:
+  </p>
+  <ol>
+    <li class="player-item" *ngFor="let player of players">
+      {{ player.description }}
+    </li>
+  </ol>
+</div>
