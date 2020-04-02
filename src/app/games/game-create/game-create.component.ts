@@ -24,10 +24,11 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn('La partie a bien été créée', this.createForm.value);
     console.warn('La partie a bien été créée', this.createForm.value["nameControl"]);
-    // Process checkout data here
+
     this.game = this.gameService.createGame();
-    this.createForm.reset();    
+    this.createForm.reset();
+    //TODO redirigé vers l'invitation de joueurs (ou demander sur ce formulaire puis attente des joueurs) 
+
   }
 }

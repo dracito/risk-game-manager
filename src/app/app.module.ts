@@ -16,6 +16,7 @@ import { PlayersListComponent } from './players/players-list/players-list.compon
 import { PlayersService } from './players/players.service';
 import { GameHomeComponent } from './games/game-home/game-home.component';
 import { GameCreateComponent } from './games/game-create/game-create.component';
+import { GameJoinComponent } from './games/game-join/game-join.component';
 
 @NgModule({
   imports:      [ 
@@ -32,7 +33,8 @@ import { GameCreateComponent } from './games/game-create/game-create.component';
     PlayerDetailsComponent,
     PlayersListComponent,
     GameHomeComponent,
-    GameCreateComponent ],
+    GameCreateComponent,
+    GameJoinComponent ],
   bootstrap:    [ AppComponent ],
   providers: [
     MissionsService,

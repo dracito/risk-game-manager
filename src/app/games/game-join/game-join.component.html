@@ -1,0 +1,9 @@
+<form [formGroup]="joinForm" (ngSubmit)="onSubmit()">
+  <div>
+    <label>
+      Token:
+      <input type="text" formControlName="tokenControl">
+    </label>
+  </div>
+  <button class="button" type="submit">Rejoindre</button>
+</form>
