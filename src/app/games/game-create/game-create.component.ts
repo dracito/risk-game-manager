@@ -20,7 +20,7 @@ export class GameCreateComponent implements OnInit {
     ])
   });
   
-  constructor(private fb: FormBuilder, private gameService:GameService) {     
+  constructor(private fb: FormBuilder, private gameService:GameService) {    
   }
 
   ngOnInit() {
@@ -28,7 +28,7 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn('La partie a bien été créée', this.createForm.value["name"]);
+    console.warn('La partie a bien été créée', this.createForm.value);
 
     this.game = this.gameService.createGame();
     //TODO redirigé vers l'invitation de joueurs (ou demander sur ce formulaire puis attente des joueurs) 
@@ -39,7 +39,7 @@ export class GameCreateComponent implements OnInit {
     return this.createForm.get('emails') as FormArray;
   }
 
-  addEmails() {
+  addEmail() {
     if(this.emails.length < 5) //Pas plus de 6 joueurs donc pas plus de 5 invités.
       this.emails.push(this.fb.control(''));
   }

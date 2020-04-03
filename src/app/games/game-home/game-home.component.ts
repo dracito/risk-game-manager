@@ -6,12 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./game-home.component.css']
 })
 export class GameHomeComponent implements OnInit {
-  gameCreate = false;
-  gameJoin = false;
+  
+  gameCreate:boolean;
+  gameJoin:boolean;
 
   constructor() { }
 
   ngOnInit() {
+    this.gameCreate = false;
+    this.gameJoin = false;
   }
 
   createGame(){
