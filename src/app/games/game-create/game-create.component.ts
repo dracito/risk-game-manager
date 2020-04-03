@@ -41,6 +41,11 @@ export class GameCreateComponent implements OnInit {
   }
   
   addEmails() {
-    this.emails.push(this.fb.control(''));
+    if(this.emails.length < 5) //Pas plus de 6 joueurs donc pas plus de 5 invités.
+      this.emails.push(this.fb.control(''));
+  }
+
+  removeEmail(i){
+    this.emails.removeAt(i);
   }
 }

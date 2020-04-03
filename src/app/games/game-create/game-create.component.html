@@ -6,14 +6,15 @@
     </label>
   </div>
   <div formArrayName="emails">
-  Emails des joueurs à inviter dans la partie: <button (click)="addEmails()">Ajouter un email</button>
-
+  Emails des joueurs à inviter dans la partie: 
+  <button (click)="addEmails()">Ajouter un email</button>
   <div *ngFor="let email of emails.controls; let i=index">
     <!-- The repeated email template -->
     <label>
       Email:
-      <input type="text" [formControlName]="i">
+      <input type="text" [formControlName]="i">      
     </label>
+    <button (click)="removeEmail(i)">Supprimer</button>
   </div>
 </div>
   <button class="button" type="submit">Créer</button>
