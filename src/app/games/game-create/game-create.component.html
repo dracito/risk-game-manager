@@ -5,5 +5,16 @@
       <input type="text" formControlName="nameControl">
     </label>
   </div>
+  <div formArrayName="emails">
+  Emails des joueurs à inviter dans la partie: <button (click)="addEmails()">Ajouter un email</button>
+
+  <div *ngFor="let email of emails.controls; let i=index">
+    <!-- The repeated email template -->
+    <label>
+      Email:
+      <input type="text" [formControlName]="i">
+    </label>
+  </div>
+</div>
   <button class="button" type="submit">Créer</button>
 </form>

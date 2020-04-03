@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GameService } from '../game.service';
 import { Game } from '../Game';
 
-import { FormBuilder, ReactiveFormsModule, FormGroup } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule, FormGroup, FormArray } from '@angular/forms';
 import { FormControl } from '@angular/forms';
 
 @Component({
@@ -12,11 +12,15 @@ import { FormControl } from '@angular/forms';
 })
 export class GameCreateComponent implements OnInit {
   game;
+
   createForm = new FormGroup({
     nameControl: new FormControl(''),
+    emails: this.fb.array([
+      this.fb.control('')
+    ])
   });
-
-  constructor(private gameService:GameService) {     
+  
+  constructor(private fb: FormBuilder, private gameService:GameService) {     
   }
 
   ngOnInit() {
@@ -30,5 +34,13 @@ export class GameCreateComponent implements OnInit {
     this.createForm.reset();
     //TODO redirigé vers l'invitation de joueurs (ou demander sur ce formulaire puis attente des joueurs) 
 
+  }
+
+  get emails() {
+    return this.createForm.get('emails') as FormArray;
+  }
+  
+  addEmails() {
+    this.emails.push(this.fb.control(''));
   }
 }
