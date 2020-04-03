@@ -11,10 +11,10 @@ import { FormControl } from '@angular/forms';
   styleUrls: ['./game-create.component.css']
 })
 export class GameCreateComponent implements OnInit {
+  
   game;
-
   createForm = this.fb.group({
-    name: [''],
+    gameName: [''],
     emails: this.fb.array([
       this.fb.control('')
     ])
@@ -30,7 +30,7 @@ export class GameCreateComponent implements OnInit {
   onSubmit() {
     console.warn('La partie a bien été créée', this.createForm.value);
 
-    this.game = this.gameService.createGame();
+    //this.game = this.gameService.createGame();
     //TODO redirigé vers l'invitation de joueurs (ou demander sur ce formulaire puis attente des joueurs) 
 
   }
