@@ -31,6 +31,6 @@ export class PlayersService {
     if(this.myPlayer)
       return this.myPlayer;
     else
-      return new Player("1", "NomPlayer1TODO");
+      return new Player("1", "NomPlayer1TODO", "emailTODO@joueur1.com");
   }  
 }

@@ -2,6 +2,7 @@
   {
     "id": "1",
     "name": "NomJoueur1",
+    "email": "email@joueur1.com",
     "createdAt": null,
     "hand": null,
     "mission": null
@@ -9,6 +10,7 @@
   {
     "id": "2",
     "name": "NomJoueur2",
+    "email": "email@joueur2.com",
     "createdAt": null,
     "hand": null,
     "mission": null
