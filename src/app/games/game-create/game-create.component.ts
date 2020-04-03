@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
+import { FormControl, FormGroup, FormArray } from '@angular/forms';
+
 import { GameService } from '../game.service';
 import { Game } from '../Game';
 
-import { FormBuilder, ReactiveFormsModule, FormGroup, FormArray } from '@angular/forms';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-game-create',
@@ -15,7 +16,7 @@ export class GameCreateComponent implements OnInit {
   game;
   createForm = this.fb.group({
     gameName: [''],
-    emails: this.fb.array([
+    guestEmails: this.fb.array([
       this.fb.control('')
     ])
   });
@@ -30,21 +31,21 @@ export class GameCreateComponent implements OnInit {
   onSubmit() {
     console.warn('La partie a bien été créée', this.createForm.value);
 
-    //this.game = this.gameService.createGame();
-    //TODO redirigé vers l'invitation de joueurs (ou demander sur ce formulaire puis attente des joueurs) 
+    this.game = this.gameService.createGame();
+    //TODO envoyer les invitations rediriger vers attente des joueurs.
 
   }
 
-  get emails():FormArray {
-    return this.createForm.get('emails') as FormArray;
+  get guestEmails():FormArray {
+    return this.createForm.get('guestEmails') as FormArray;
   }
 
   addEmail() {
-    if(this.emails.length < 5) //Pas plus de 6 joueurs donc pas plus de 5 invités.
-      this.emails.push(this.fb.control(''));
+    if(this.guestEmails.length < 5) //Pas plus de 6 joueurs donc pas plus de 5 invités.
+      this.guestEmails.push(this.fb.control(''));
   }
 
   removeEmail(i:number){
-    this.emails.removeAt(i);
+    this.guestEmails.removeAt(i);
   }
 }
