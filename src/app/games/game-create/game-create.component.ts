@@ -4,6 +4,7 @@ import { FormControl, FormGroup, FormArray } from '@angular/forms';
 
 import { GameService } from '../game.service';
 import { Game } from '../Game';
+import { Player } from '../../players/Player';
 
 
 @Component({
@@ -13,9 +14,9 @@ import { Game } from '../Game';
 })
 export class GameCreateComponent implements OnInit {
   
-  game;
   createForm = this.fb.group({
-    gameName: ['', [Validators.required, Validators.maxLength(50)]],
+    gameName: ['', 
+      [Validators.required, Validators.maxLength(50)]],
     guestEmails: this.fb.array(
       [this.getEmailControl()],
       [Validators.required]
@@ -27,7 +28,7 @@ export class GameCreateComponent implements OnInit {
   }
 
   private getEmailControl():FormControl{
-    return this.fb.control('', Validators.email);
+    return this.fb.control('', [Validators.email, Validators.required]);
   }
 
   ngOnInit() {
@@ -49,13 +50,22 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn('La partie a bien été créée', this.createForm.value);
+    
     this.isValidFormSubmitted = false;
 		if (this.createForm.invalid) {
 			return;
 		}
-		this.isValidFormSubmitted = true;		
+		this.isValidFormSubmitted = true;
+    let game:Game = new Game();
+    game.name = this.gameName.value;
+    if(!game.players)
+      game.players = new Array<Player>();
+    let player:Player = new Player();
+    game.players.push
+
 		this.gameService.saveGame(this.game);
+    console.warn('La partie a bien été créée', this.createForm.value);
+    console.warn('La partie', game);
 		//this.createForm.reset();
     //TODO envoyer les invitations rediriger vers attente des joueurs.
   }

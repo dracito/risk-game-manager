@@ -19,7 +19,7 @@
     <div *ngFor="let email of guestEmails.controls; let i=index">
       <!-- The repeated email template -->
       <label>
-        Email:
+        Email du joueur {{ i+1 }}:
         <input type="text" [formControlName]="i">      
       </label>
       <div *ngIf="email.invalid && (email.dirty || email.touched)"
