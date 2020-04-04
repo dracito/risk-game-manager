@@ -17,9 +17,8 @@ export class GameService {
 
   constructor(private territoriesService: TerritoriesService, private playersService:PlayersService) { }
 
-  public createGame(name:string):Game{
-    let game = new Game();
-    game.name = name;
+  public createGame(game:Game):Game{
+    //TODO check game creation?
     return this.saveGame(game);
   }
 
