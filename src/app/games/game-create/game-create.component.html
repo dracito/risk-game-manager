@@ -2,7 +2,7 @@
   <div>
     <label>
       Nom:
-      <input type="text" [formControlName]="gameName" required>      
+      <input type="text" formControlName="gameName" required>      
     </label>
     <div *ngIf="gameName.invalid && (gameName.dirty || gameName.touched)"
       class="alert alert-danger">
@@ -15,28 +15,28 @@
     </div>
   </div>
   <div formArrayName="guestEmails">
-    Emails des joueurs à inviter dans la partie: 
-    <button (click)="addEmail()">Ajouter un email</button>
+    Emails des joueurs à inviter dans la partie:     
     <div *ngFor="let email of guestEmails.controls; let i=index">
       <!-- The repeated email template -->
       <label>
         Email:
         <input type="text" [formControlName]="i">      
       </label>
-      <div *ngIf="guestEmails.controls[i].invalid && (guestEmails.controls[i].dirty || guestEmails.controls[i].touched)"
+      <div *ngIf="email.invalid && (email.dirty || email.touched)"
         class="alert alert-danger">
-        <div *ngIf="guestEmails.controls[i].errors?.email">
+        <div *ngIf="email.errors?.email">
           Email incorect.
         </div>
       </div>
-      <button (click)="removeEmail(i)">Supprimer</button>
+      <button class="remove-button" type="button" (click)="removeEmail(i)">Supprimer</button>
     </div>
     <div *ngIf="guestEmails.invalid && (guestEmails.dirty || guestEmails.touched)"
       class="alert alert-danger">
       <div *ngIf="guestEmails.errors?.required">
         Au moins un email requis.
       </div>
-    </div>
+    </div>    
   </div>
+  <button class="add-button" type="button" (click)="addEmail()">Ajouter un email</button>
   <button class="button" type="submit" [disabled]="!createForm.valid">Créer</button>
 </form>

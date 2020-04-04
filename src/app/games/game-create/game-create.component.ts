@@ -14,36 +14,24 @@ import { Game } from '../Game';
 export class GameCreateComponent implements OnInit {
   
   game;
-  createForm = this.fb.group({
+  createForm;
+  isValidFormSubmitted = null;
+  
+  constructor(private fb: FormBuilder, private gameService:GameService) {    
+  }
+
+  private getEmailControl():FormControl{
+    return this.fb.control('', Validators.email);
+  }
+
+  ngOnInit() {
+    this.createForm = this.fb.group({
     gameName: ['', [Validators.required, Validators.maxLength(50)]],
     guestEmails: this.fb.array(
       [this.getEmailControl()],
       [Validators.required]
     )
   });
-  isValidFormSubmitted = null;
-  
-  constructor(private fb: FormBuilder, private gameService:GameService) {    
-  }
-
-  private getEmailControl(){
-    return this.fb.control('', Validators.email);
-  }
-
-  ngOnInit() {
-  }
-
-  onSubmit() {
-    console.warn('La partie a bien été créée', this.createForm.value);
-    this.isValidFormSubmitted = false;
-		if (this.createForm.invalid) {
-			return;
-		}
-		this.isValidFormSubmitted = true;
-		this.game = this.createForm.value;
-		this.gameService.saveGame(this.game);
-		this.createForm.reset();
-    //TODO envoyer les invitations rediriger vers attente des joueurs.
   }
 
   get gameName() { return this.createForm.get('gameName'); }
@@ -59,5 +47,17 @@ export class GameCreateComponent implements OnInit {
 
   removeEmail(i:number){
     this.guestEmails.removeAt(i);
+  }
+
+  onSubmit() {
+    console.warn('La partie a bien été créée', this.createForm.value);
+    this.isValidFormSubmitted = false;
+		if (this.createForm.invalid) {
+			return;
+		}
+		this.isValidFormSubmitted = true;		
+		this.gameService.saveGame(this.game);
+		//this.createForm.reset();
+    //TODO envoyer les invitations rediriger vers attente des joueurs.
   }
 }
