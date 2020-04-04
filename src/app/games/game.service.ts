@@ -17,12 +17,7 @@ export class GameService {
 
   constructor(private territoriesService: TerritoriesService, private playersService:PlayersService) { }
 
-  public createGame(game:Game):Game{
-    //TODO check game creation?
-    return this.saveGame(game);
-  }
-
-  private saveGame(game:Game):Game{
+  public saveGame(game:Game):Game{
     //TODO save game in database
     //game.id = BDD.save(Game);
     return game;

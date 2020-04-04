@@ -19,7 +19,7 @@ export class GameCreateComponent implements OnInit {
     guestEmails: this.fb.array(
       [this.getEmailControl()],
       [Validators.required]
-      )
+    )
   });
   isValidFormSubmitted = null;
   
@@ -41,10 +41,9 @@ export class GameCreateComponent implements OnInit {
 		}
 		this.isValidFormSubmitted = true;
 		this.game = this.createForm.value;
-		this.gameService.createGame(this.game);
+		this.gameService.saveGame(this.game);
 		this.createForm.reset();
     //TODO envoyer les invitations rediriger vers attente des joueurs.
-
   }
 
   get gameName() { return this.createForm.get('gameName'); }
@@ -54,7 +53,7 @@ export class GameCreateComponent implements OnInit {
   }
 
   addEmail() {
-    if(this.guestEmails.length < 5) //Pas plus de 6 joueurs donc pas plus de 5 invités.
+    if(this.guestEmails.length < 5) //6 joueurs max donc pas plus de 5 invités.
       this.guestEmails.push(this.getEmailControl());
   }
 
