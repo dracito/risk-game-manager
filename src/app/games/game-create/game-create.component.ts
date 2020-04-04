@@ -14,7 +14,13 @@ import { Game } from '../Game';
 export class GameCreateComponent implements OnInit {
   
   game;
-  createForm;
+  createForm = this.fb.group({
+    gameName: ['', [Validators.required, Validators.maxLength(50)]],
+    guestEmails: this.fb.array(
+      [this.getEmailControl()],
+      [Validators.required]
+    )
+  });
   isValidFormSubmitted = null;
   
   constructor(private fb: FormBuilder, private gameService:GameService) {    
@@ -25,13 +31,6 @@ export class GameCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.createForm = this.fb.group({
-    gameName: ['', [Validators.required, Validators.maxLength(50)]],
-    guestEmails: this.fb.array(
-      [this.getEmailControl()],
-      [Validators.required]
-    )
-  });
   }
 
   get gameName() { return this.createForm.get('gameName'); }
