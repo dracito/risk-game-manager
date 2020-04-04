@@ -2,17 +2,17 @@
   <div>
     <label>
       Nom:
-      <input type="text" formControlName="gameName" required>      
+      <input type="text" [formControlName]="gameName" required>      
     </label>
     <div *ngIf="gameName.invalid && (gameName.dirty || gameName.touched)"
-        class="alert alert-danger">
-        <div *ngIf="gameName.errors.required">
-          Nom requis.
-        </div>
-        <div *ngIf="gameName.errors.maxlength">
-          Nom ne doit pas dépasser 50 caractères.
-        </div>
+      class="alert alert-danger">
+      <div *ngIf="gameName.errors.required">
+        Nom requis.
       </div>
+      <div *ngIf="gameName.errors.maxlength">
+        Nom ne doit pas dépasser 50 caractères.
+      </div>
+    </div>
   </div>
   <div formArrayName="guestEmails">
     Emails des joueurs à inviter dans la partie: 
@@ -38,5 +38,5 @@
       </div>
     </div>
   </div>
-  <button class="button" type="submit">Créer</button>
+  <button class="button" type="submit" [disabled]="!createForm.valid">Créer</button>
 </form>

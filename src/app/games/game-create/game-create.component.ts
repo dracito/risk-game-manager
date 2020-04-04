@@ -31,7 +31,6 @@ export class GameCreateComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.game = new Game();
   }
 
   onSubmit() {
