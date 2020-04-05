@@ -56,14 +56,14 @@ export class GameCreateComponent implements OnInit {
 			return;
 		}
 		this.isValidFormSubmitted = true;
-    let game:Game = new Game();
-    game.name = this.gameName.value;
-    if(!game.players)
-      game.players = new Array<Player>();
-    let player:Player = new Player();
-    game.players.push(player);
-
-		this.gameService.saveGame(this.game);
+    
+    let players = new Array<Player>();
+    for (let email of this.guestEmails.value) {
+      players.push(new Player({email:email}));
+    }
+    //TODO add user to list of player
+    let game:Game = new Game({name:this.gameName.value, players:players});
+		this.gameService.saveGame(game);
     console.warn('La partie a bien été créée', this.createForm.value);
     console.warn('La partie', game);
 		//this.createForm.reset();
