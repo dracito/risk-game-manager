@@ -32,7 +32,7 @@ export class PlayersService {
       return this.myPlayer;
     else
     {
-      return new Player({id="1", name="NomPlayer1TODO", email:"emailTODO@joueur1.com"});
+      return new Player({id:"1",name:"NomPlayer1TODO", email:"emailTODO@joueur1.com"});
     }
   }  
 }
