@@ -37,6 +37,7 @@ export class Player{
     this.name = obj && obj.name || ""
     this.email = obj && obj.email || ""
     this.createdAt = obj && obj.createdAt || new Date(Date.now())
+    this.hand = obj && obj.hand || new Array<DeckCard>()
     this.mission = obj && obj.mission || new Array<DeckCard>()
     ;
   }
