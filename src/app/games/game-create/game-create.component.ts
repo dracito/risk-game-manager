@@ -63,8 +63,7 @@ export class GameCreateComponent implements OnInit {
     }
     //TODO add user to list of player
     let game:Game = new Game({name:this.gameName.value, players:players});
-		this.gameService.saveGame(game);
-    console.warn('La partie a bien été créée', this.createForm.value);
+		this.gameService.saveGame(game);    
     console.warn('La partie', game);
 		//this.createForm.reset();
     //TODO envoyer les invitations rediriger vers attente des joueurs.
