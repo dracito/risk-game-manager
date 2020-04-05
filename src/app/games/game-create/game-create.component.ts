@@ -61,7 +61,7 @@ export class GameCreateComponent implements OnInit {
     if(!game.players)
       game.players = new Array<Player>();
     let player:Player = new Player();
-    game.players.push
+    game.players.push(player);
 
 		this.gameService.saveGame(this.game);
     console.warn('La partie a bien été créée', this.createForm.value);

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import { Player } from './Player';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
+import { Player } from './Player';
 
 @Injectable()
 export class PlayersService {
@@ -26,11 +26,13 @@ export class PlayersService {
   }
 
   //Get player associated with my user session
-  public getMyPlayer(/*user:User*/):Player{
+  public getMyPlayer(/*user:User*/):Player{    
     //TODO when User session and auth done
     if(this.myPlayer)
       return this.myPlayer;
     else
-      return new Player("1", "NomPlayer1TODO", "emailTODO@joueur1.com");
+    {
+      return new Player({id="1", name="NomPlayer1TODO", email:"emailTODO@joueur1.com"});
+    }
   }  
 }

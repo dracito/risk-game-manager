@@ -1,28 +1,43 @@
 import { DeckCard } from "../cards/DeckCard";
 import { MissionCard } from "../cards/missions/MissionCard";
 
+
+interface IPlayer {
+  id?:string;
+  name?:string;
+  email?:string;
+  createdAt?:Date;
+  hand?:Array<DeckCard>;
+  mission?:MissionCard;
+}
+
 export class Player{
   
-  public static fromJson(json: Object): Player {
+  public static fromJson(json: Object): Player {    
     return new Player(
-        json['id'],
-        json['name'],
-        json['email']
+      {
+        id:json['id'],
+        name:json['name'],
+        email:json['email']
+      }
     );
   }
 
-  id:string;
-  name:string;
-  email:string;
-  createdAt:Date;
-  hand:Array<DeckCard>;
-  mission:MissionCard;
+  id?:string;
+  name?:string;
+  email?:string;
+  createdAt?:Date;
+  hand?:Array<DeckCard>;
+  mission?:MissionCard;
 
-  constructor(id:string, name:string, email:string){
-    this.id = id;
-    this.name = name;
-    this.email = email;
-    this.createdAt = new Date(Date.now());
-    this.hand = new Array<DeckCard>();
+  constructor();
+  constructor(obj: IPlayer)
+  constructor(obj?: any) {
+    this.id = obj && obj.id || 0
+    this.name = obj && obj.name || ""
+    this.email = obj && obj.email || ""
+    this.createdAt = obj && obj.createdAt || new Date(Date.now())
+    this.mission = obj && obj.mission || new Array<DeckCard>()
+    ;
   }
 }
