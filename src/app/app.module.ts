@@ -1,7 +1,10 @@
+import { environment } from "../environments/environment";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from "@angular/fire";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -23,7 +26,9 @@ import { GameJoinComponent } from './games/game-join/game-join.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule ],
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule ],
   declarations: [ 
     AppComponent,
     HelloComponent,
