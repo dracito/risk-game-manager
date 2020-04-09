@@ -22,7 +22,6 @@ export class GameCreateComponent implements OnInit {
       [Validators.required]
     )
   });
-  isValidFormSubmitted = null;
   
   constructor(private fb: FormBuilder, private gameService:GameService) {    
   }
@@ -50,13 +49,10 @@ export class GameCreateComponent implements OnInit {
   }
 
   onSubmit() {
-    
-    this.isValidFormSubmitted = false;
-		if (this.createForm.invalid) {
+  	if (this.createForm.invalid) {
 			return;
 		}
-		this.isValidFormSubmitted = true;
-    
+	 
     let players = new Array<Player>();
     for (let email of this.guestEmails.value) {
       players.push(new Player({email:email}));
